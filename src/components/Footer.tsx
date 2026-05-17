@@ -21,7 +21,6 @@ const Footer = () => {
             <div className="space-y-2.5">
               {[
                 { label: "Home", href: "#home" },
-                { label: "Inventory", href: "#inventory" },
                 { label: "Services", href: "#services" },
                 { label: "About", href: "#about" },
                 { label: "Contact", href: "#quote" },

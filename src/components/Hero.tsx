@@ -24,10 +24,10 @@ const Hero = () => {
           </p>
           <div className="reveal-up delay-300 flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-4">
             <a
-              href="#inventory"
+              href="#services"
               className="inline-flex w-full sm:w-auto items-center justify-center gap-3 bg-accent text-accent-foreground px-8 py-4 text-sm tracking-wider uppercase rounded-sm transition-all duration-200 hover:opacity-90"
             >
-              View Inventory
+              View Services
             </a>
             <a
               href="#quote"
