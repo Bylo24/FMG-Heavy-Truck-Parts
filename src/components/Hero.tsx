@@ -1,6 +1,6 @@
 const Hero = () => {
   return (
-    <section id="home" className="relative isolate min-h-[84svh] lg:min-h-[86svh] flex items-end pt-24 sm:pt-28 md:pt-32 lg:pt-28 pb-16 md:pb-20 overflow-hidden bg-neutral-950">
+    <section id="home" className="relative isolate min-h-[94svh] lg:min-h-[96svh] flex items-end pt-24 sm:pt-28 md:pt-32 lg:pt-28 pb-20 md:pb-24 overflow-hidden bg-neutral-950">
       <div className="absolute inset-0 z-0 pointer-events-none">
         <img
           src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1920&q=80"
