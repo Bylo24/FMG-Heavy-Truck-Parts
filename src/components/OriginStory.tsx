@@ -4,8 +4,8 @@ const OriginStory = () => {
   return (
     <section id="about" className="section-spacing">
       <div className="section-container">
-        <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-          <div className="lg:col-span-6 order-2 lg:order-1">
+        <div className="max-w-4xl">
+          <div>
             <span className="text-xs tracking-[0.25em] uppercase text-accent mb-4 block font-sans">
               About
             </span>
@@ -30,17 +30,6 @@ const OriginStory = () => {
                   </p>
                 </div>
               ))}
-            </div>
-          </div>
-
-          <div className="lg:col-span-6 order-1 lg:order-2">
-            <div className="relative overflow-hidden rounded-sm bg-neutral-950 aspect-[4/5] md:aspect-[5/6] shadow-[0_25px_60px_-30px_rgba(0,0,0,0.45)]">
-              <img
-                src="https://images.unsplash.com/photo-1580674684081-7617fbf3d745?auto=format&fit=crop&w=800&q=80"
-                alt="Organized heavy vehicle component yard"
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
             </div>
           </div>
         </div>
