@@ -17,7 +17,7 @@ const Hero = () => {
       <div className="section-container w-full relative z-10">
         <div className="max-w-4xl">
           <h1 className="reveal-up delay-100 mt-3 sm:mt-4 lg:mt-6 font-display text-4xl sm:text-5xl md:text-6xl lg:text-[5.75rem] leading-[0.92] text-background mb-5 text-balance max-w-3xl">
-            FMG Heavy Truck Parts supplies reliable commercial vehicle components and heavy transport storage services across Alberta.
+            Heavy Truck Parts And Storage In Alberta.
           </h1>
           <p className="reveal-up delay-200 text-sm sm:text-base md:text-lg lg:text-xl text-background leading-relaxed max-w-2xl mb-6 sm:mb-8 font-light">
             The yard manages commercial truck dismantling and secure vehicle storage solutions for fleet operators and transport companies.
