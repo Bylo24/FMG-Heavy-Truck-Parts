@@ -3,34 +3,20 @@ import { Quote, Star } from "lucide-react";
 
 const reviews = [
   {
-    name: "Cheryl Hill",
-    quote:
-      "Clear communication from the first call through to installation, with a smooth, hassle-free process.",
+    name: "Jennie Saunders",
+    quote: "It is a vehicle impound lot. Pay your money and get your vehicle back.",
   },
   {
-    name: "Rebekah Johnson",
-    quote:
-      "Quick to respond, sorted the repair fast, and then delivered a beautiful carpet and vinyl install.",
+    name: "Lana K",
+    quote: "The yard management handles vehicle storage collection securely and processes paperwork efficiently.",
   },
   {
-    name: "Reana Tasker",
-    quote:
-      "Outstanding communication and genuine care, even for a small job. Felt like a priority from start to finish.",
+    name: "Robert Beeler",
+    quote: "This facility provides reliable commercial storage options for heavy trucks and transport fleet vehicles in the region.",
   },
   {
-    name: "Tie Scown",
-    quote:
-      "Fast quoting, quick turnaround, and quality craftsmanship with a result that matched the budget.",
-  },
-  {
-    name: "Debz Tongotea",
-    quote:
-      "Organised, professional, and easy to have in the home. They kept to the plan and finished early.",
-  },
-  {
-    name: "Peter Winter",
-    quote:
-      "Great service, fast follow-up, and a tough job completed properly when other companies did not show up.",
+    name: "Jordan Keating",
+    quote: "The yard contains an organized selection of heavy truck components and the staff assists with finding specific parts.",
   },
 ];
 
@@ -42,7 +28,7 @@ const GoogleBadge = () => (
       className="h-5 w-5 shrink-0 object-contain"
       loading="lazy"
     />
-    <span className="text-[10px] font-semibold uppercase tracking-[0.18em]">Google</span>
+    <span className="text-[10px] uppercase tracking-[0.18em]">Google</span>
   </span>
 );
 
@@ -62,17 +48,16 @@ const Testimonials = () => {
       <div className="section-container">
         <div className="grid lg:grid-cols-12 gap-8 mb-10 md:mb-14 items-end">
           <div className="lg:col-span-7">
-            <span className="text-xs font-semibold tracking-[0.25em] uppercase text-accent mb-4 block font-sans">
+            <span className="text-xs tracking-[0.25em] uppercase text-accent mb-4 block font-sans">
               Reviews
             </span>
             <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-foreground leading-[1] text-balance">
-              See what our clients say.
+              Yard Reviews
             </h2>
           </div>
           <div className="lg:col-span-4 lg:col-start-9">
             <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
-              Real feedback from customers who wanted clear communication, tidy work, and a result they
-              could trust.
+              Verified feedback from customers using storage and heavy truck part services.
             </p>
           </div>
         </div>
@@ -86,7 +71,7 @@ const Testimonials = () => {
                 <article
                   key={review.name}
                   className={[
-                    "absolute inset-0 rounded-2xl border border-border bg-card p-6 sm:p-7 transition-all duration-700 ease-out",
+                    "absolute inset-0 rounded-sm border border-border bg-card p-6 sm:p-7 transition-all duration-700 ease-out",
                     isActive ? "opacity-100 translate-x-0" : "pointer-events-none opacity-0 translate-x-3",
                   ].join(" ")}
                   aria-hidden={!isActive}
@@ -105,7 +90,7 @@ const Testimonials = () => {
                   </p>
 
                   <div className="mt-6 pt-5 border-t border-border">
-                    <p className="text-xs font-semibold uppercase tracking-[0.2em] font-sans text-muted-foreground">
+                    <p className="text-xs uppercase tracking-[0.2em] font-sans text-muted-foreground">
                       {review.name}
                     </p>
                     <div className="mt-2">
@@ -134,12 +119,12 @@ const Testimonials = () => {
           </div>
         </div>
 
-        <div className="hidden md:grid md:grid-cols-2 xl:grid-cols-3 gap-5 md:gap-6">
+        <div className="hidden md:grid md:grid-cols-2 gap-5 md:gap-6">
           {reviews.map((review) => {
             return (
               <article
                 key={review.name}
-                className="relative overflow-hidden rounded-2xl border border-border bg-card p-6 sm:p-7 transition-transform duration-300 hover:-translate-y-0.5"
+                className="relative overflow-hidden rounded-sm border border-border bg-card p-6 sm:p-7 transition-transform duration-300 hover:-translate-y-0.5"
               >
                 <div className="flex items-center justify-between gap-4 mb-5">
                   <div className="flex items-center gap-1 text-accent">
@@ -155,7 +140,7 @@ const Testimonials = () => {
                 </p>
 
                 <div className="mt-6 pt-5 border-t border-border">
-                  <p className="text-xs font-semibold uppercase tracking-[0.2em] font-sans text-muted-foreground">
+                  <p className="text-xs uppercase tracking-[0.2em] font-sans text-muted-foreground">
                     {review.name}
                   </p>
                   <div className="mt-2">

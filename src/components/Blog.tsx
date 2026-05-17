@@ -1,69 +1,55 @@
-import { useEffect } from "react";
-
-const instagramProfileUrl = "https://www.instagram.com/2_brothers_flooring_ltd/";
+const inventoryImages = [
+  {
+    src: "https://images.unsplash.com/photo-1592838064575-70ed626d3a44?auto=format&fit=crop&w=600&q=80",
+    alt: "Heavy truck in an industrial yard",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1616422285623-13ff0162193c?auto=format&fit=crop&w=600&q=80",
+    alt: "Commercial vehicle parts and machinery",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1501700493788-fa1a4fc9fe62?auto=format&fit=crop&w=600&q=80",
+    alt: "Semi tractor on a transport route",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80",
+    alt: "Organized logistics and transport operation",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1608686207856-001b95cf60ca?auto=format&fit=crop&w=600&q=80",
+    alt: "Heavy vehicle component storage",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1542442828-257219879015?auto=format&fit=crop&w=600&q=80",
+    alt: "Commercial truck and clean salvage operation",
+  },
+];
 
 const Blog = () => {
-  useEffect(() => {
-    const instagramWindow = window as Window & {
-      instgrm?: {
-        Embeds?: {
-          process?: () => void;
-        };
-      };
-    };
-
-    const scriptId = "instagram-embed-script";
-    const existingScript = document.getElementById(scriptId) as HTMLScriptElement | null;
-
-    if (existingScript) {
-      instagramWindow.instgrm?.Embeds?.process?.();
-      return;
-    }
-
-    const script = document.createElement("script");
-    script.id = scriptId;
-    script.async = true;
-    script.defer = true;
-    script.src = "https://www.instagram.com/embed.js";
-    script.onload = () => {
-      instagramWindow.instgrm?.Embeds?.process?.();
-    };
-
-    document.body.appendChild(script);
-  }, []);
-
   return (
-    <section id="work" className="section-spacing bg-card">
+    <section id="inventory" className="section-spacing bg-card">
       <div className="section-container">
-        <div className="grid gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:gap-12 items-start">
-          <div className="max-w-xl lg:pt-8 xl:pt-10">
-            <span className="text-xs font-semibold tracking-[0.25em] uppercase text-accent mb-4 block font-sans">
-              Our Work
-            </span>
-            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-foreground leading-[1] text-balance">
-              See Our Work.
-            </h2>
-          </div>
+        <div className="mb-10 md:mb-14">
+          <span className="text-xs tracking-[0.25em] uppercase text-accent mb-4 block font-sans">
+            Inventory
+          </span>
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-foreground leading-[1] text-balance">
+            Inventory Yard
+          </h2>
+        </div>
 
-          <div className="lg:justify-self-end w-full lg:max-w-[440px] xl:max-w-[500px]">
-            <div className="overflow-hidden rounded-sm bg-card border border-border shadow-[0_25px_80px_rgba(0,0,0,0.08)]">
-              <blockquote
-                className="instagram-media w-full !max-w-none"
-                data-instgrm-permalink={instagramProfileUrl}
-                data-instgrm-version="14"
-                style={{
-                  width: "100%",
-                  minWidth: "326px",
-                  maxWidth: "100%",
-                  margin: "0 auto",
-                }}
-              >
-                <a href={instagramProfileUrl} target="_blank" rel="noreferrer">
-                  View this profile on Instagram
-                </a>
-              </blockquote>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
+          {inventoryImages.map((image) => (
+            <div key={image.src} className="group relative overflow-hidden rounded-sm bg-neutral-950 aspect-[4/3]">
+              <img
+                src={image.src}
+                alt={image.alt}
+                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-70" />
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

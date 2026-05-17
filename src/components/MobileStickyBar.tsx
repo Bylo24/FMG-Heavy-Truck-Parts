@@ -8,16 +8,16 @@ const MobileStickyBar = () => {
         bottom: "calc(env(safe-area-inset-bottom, 0px) + 6px)",
       }}
     >
-      <div className="mx-auto grid max-w-md grid-cols-2 gap-2 rounded-2xl border border-border bg-background/95 p-2 shadow-[0_-10px_30px_rgba(0,0,0,0.08)] backdrop-blur-md supports-[backdrop-filter]:bg-background/90">
+      <div className="mx-auto grid max-w-md grid-cols-2 gap-2 rounded-sm border border-border bg-background/95 p-2 shadow-[0_-10px_30px_rgba(0,0,0,0.08)] backdrop-blur-md supports-[backdrop-filter]:bg-background/90">
         <a
           href="#quote"
-          className="inline-flex h-11 items-center justify-center rounded-xl bg-foreground px-4 text-[0.72rem] font-semibold uppercase tracking-[0.12em] text-background transition-opacity hover:opacity-90"
+          className="inline-flex h-11 items-center justify-center rounded-sm bg-accent px-4 text-[0.72rem] uppercase tracking-[0.12em] text-accent-foreground transition-opacity hover:opacity-90"
         >
-          Get a Quote
+          Request Parts
         </a>
         <a
-          href="tel:+64275861915"
-          className="inline-flex h-11 items-center justify-center gap-2 rounded-xl border border-border bg-background px-4 text-[0.72rem] font-semibold uppercase tracking-[0.12em] text-foreground transition-colors hover:bg-muted"
+          href="tel:+14035550198"
+          className="inline-flex h-11 items-center justify-center gap-2 rounded-sm border border-border bg-background px-4 text-[0.72rem] uppercase tracking-[0.12em] text-foreground transition-colors hover:bg-muted"
         >
           <Phone size={16} strokeWidth={2} />
           Call
